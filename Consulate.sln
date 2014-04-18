@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Consulate.Cloud", "Consulate.Cloud\Consulate.Cloud.ccproj", "{56CD7D82-63B8-4133-9A26-A209C3E0C24B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consulate", "Consulate\Consulate.csproj", "{8B046FFB-2F17-44D4-8DBF-4FEF9D73794C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56CD7D82-63B8-4133-9A26-A209C3E0C24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CD7D82-63B8-4133-9A26-A209C3E0C24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56CD7D82-63B8-4133-9A26-A209C3E0C24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CD7D82-63B8-4133-9A26-A209C3E0C24B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B046FFB-2F17-44D4-8DBF-4FEF9D73794C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B046FFB-2F17-44D4-8DBF-4FEF9D73794C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B046FFB-2F17-44D4-8DBF-4FEF9D73794C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B046FFB-2F17-44D4-8DBF-4FEF9D73794C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
