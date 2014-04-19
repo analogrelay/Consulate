@@ -1,18 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ServiceDefinition name="ConsulServiceIndex.Cloud" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2013-10.2.2">
-  <WebRole name="Consulate" vmsize="Small">
-    <Sites>
-      <Site name="Web">
-        <Bindings>
-          <Binding name="Endpoint1" endpointName="Endpoint1" />
-        </Bindings>
-      </Site>
-    </Sites>
-    <Endpoints>
-      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
-    </Endpoints>
-    <Imports>
-      <Import moduleName="Diagnostics" />
-    </Imports>
-  </WebRole>
+<ServiceDefinition name="ConsulServiceIndex.Cloud" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-01.2.3">
+    <WebRole name="Consulate" vmsize="Small">
+        <Sites>
+            <Site name="Web">
+                <Bindings>
+                    <Binding name="Http" endpointName="Http" />
+                </Bindings>
+            </Site>
+        </Sites>
+        <Imports>
+            <Import moduleName="Diagnostics" />
+        </Imports>
+        <LocalResources>
+            <LocalStorage name="ConsulData" cleanOnRoleRecycle="false" sizeInMB="512" />
+            <LocalStorage name="ConsulConfig" cleanOnRoleRecycle="false" sizeInMB="128" />
+            <LocalStorage name="ConsulLogs" cleanOnRoleRecycle="false" sizeInMB="128" />
+        </LocalResources>
+        <Endpoints>
+            <InternalEndpoint name="Consul.Dns" protocol="udp" port="8600" />
+            <InternalEndpoint name="Consul.SerfLan" protocol="tcp" port="8301" />
+            <InternalEndpoint name="Consul.SerfWan" protocol="tcp" port="8302" />
+            <InternalEndpoint name="Consul.Server" protocol="tcp" port="8300" />
+
+            <!-- Public Endpoints -->
+            <InputEndpoint name="Consul.Rpc" protocol="tcp" port="8400" />
+            <InputEndpoint name="Consul.Http" protocol="http" port="8500" />
+            <InputEndpoint name="Http" protocol="http" localPort="80" port="80" />
+        </Endpoints>
+        <ConfigurationSettings>
+            <Setting name="StorageAccount" />
+        </ConfigurationSettings>
+    </WebRole>
 </ServiceDefinition>

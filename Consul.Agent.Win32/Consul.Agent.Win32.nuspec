@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Consul.Agent.Win32</id>
+    <version>0.1.0-alpha-0001</version>
+    <authors>Hashicorp</authors>
+    <owners>Andrew Stanton-Nurse</owners>
+    <licenseUrl>https://raw.githubusercontent.com/hashicorp/consul/master/LICENSE</licenseUrl>
+    <projectUrl>http://www.consul.io/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Unofficial Packaging of https://www.consul.io agent for 32-bit Windows</description>
+  </metadata>
+  <files>
+    <file src="**" exclude="tools\info.md" />
+  </files>
+</package>

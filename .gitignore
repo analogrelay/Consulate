@@ -154,3 +154,4 @@ $RECYCLE.BIN/
 
 # Ignore the consul.exe, the developer needs to get it themselves
 Consul.Agent.Win32/tools/consul.exe
+Consul.Agent.Win32/*.nupkg

@@ -12,9 +12,12 @@ namespace Consulate
 {
     public class Startup
     {
-        public void Configuration(IAppBuilder app) {
+        public void Configuration(IAppBuilder app)
+        {
+            var url = "http://" + WebRole.GetIP("Consul.SerfLan").ToString() + ":" + WebRole.GetPort("Consul.Http").ToString();
+            
             app.UseErrorPage(ErrorPageOptions.ShowAll);
-            app.UseConsulate();
+            app.UseConsulate(new Uri(url));
         }
     }
 }
